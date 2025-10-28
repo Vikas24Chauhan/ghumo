@@ -1,0 +1,270 @@
+.places-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 7rem;
+}
+
+.places-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.places-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 15px;
+}
+
+.popular-place p {
+  font-size: 1.1rem;
+  color: #718096;
+}
+
+.places-filter-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.places-category-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.places-category-filter-btn {
+  padding: 8px 20px;
+  border: 2px solid #dee2e6;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #495057;
+  transition: all 0.3s ease;
+}
+
+.places-category-filter-btn:hover {
+  border-color: #007bff;
+  color: #007bff;
+  transform: translateY(-2px);
+}
+
+.places-category-filter-btn.active {
+  background: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.places-states-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 2%;
+}
+
+.places-state-card {
+  width: 32%;
+  border-radius: 20px;
+  margin-bottom: 28px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  animation: slideInUp 0.6s ease-out;
+  position: relative;
+}
+
+.places-state-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.places-card-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.places-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.places-state-card:hover .places-card-image img {
+  transform: scale(1.1);
+}
+
+.places-card-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.places-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.places-star-icon {
+  color: #ffd700;
+}
+
+/* .map-icon {
+  background: rgba(255, 255, 255, 0.9);
+  color: #4299e1;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.map-icon:hover {
+  background: #4299e1;
+  color: white;
+} */
+
+.places-card-content {
+  padding: 25px;
+}
+
+.places-state-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.places-popular-place {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4299e1;
+  margin-bottom: 12px;
+}
+
+.places-description {
+  color: #718096;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.places-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.places-category-tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.places-category-tag.heritage {
+  background: #fed7d7;
+  color: #c53030;
+}
+.places-category-tag.nature {
+  background: #c6f6d5;
+  color: #276749;
+}
+.places-category-tag.beach {
+  background: #bee3f8;
+  color: #2c5282;
+}
+.places-category-tag.mountain {
+  background: #e9d8fd;
+  color: #553c9a;
+}
+.places-category-tag.spiritual {
+  background: #feebc8;
+  color: #c05621;
+}
+.places-category-tag.city {
+  background: #fed7e2;
+  color: #97266d;
+}
+.places-category-tag.desert {
+  background: #faf089;
+  color: #744210;
+}
+.places-category-tag.wildlife {
+  background: #c6f6d5;
+  color: #22543d;
+}
+.places-category-tag.culture {
+  background: #e2e8f0;
+  color: #2d3748;
+}
+
+.places-explore-text {
+  color: #4299e1;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.places-state-card:hover .places-explore-text {
+  transform: translateX(5px);
+}
+
+/* No Results */
+.places-no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #718096;
+}
+
+.places-no-results h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #4a5568;
+}
+
+/* ------------------------ Responsive Design --------------- */
+@media (max-width: 1440px) {
+  .places-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .places-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .places-state-card {
+    width: 49%;
+  }
+
+  .places-state-name {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .places-state-card {
+    width: 100%;
+  }
+}
