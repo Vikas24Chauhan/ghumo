@@ -1,154 +1,115 @@
-.tc-container {
+.tc-menu-wrap {
   width: 100%;
-  background-color: #f1f1f1;
   position: relative;
   overflow: hidden;
 }
 
-.tc-upper-image {
-  width: 100%;
-  height: 150px;
-}
-
-.tc-lower-image {
-  width: 100%;
-  height: 150px;
-}
-
-.tc-inner-div {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px 0;
-}
-
-.tc-inner-div h1 {
+.tc-menu-wrap h4 {
   font-size: 2rem;
+  color: #fdc703;
   text-align: center;
-  width: 200px;
-  padding: 2.5rem 1rem;
-  color: white;
-  background-color: #029e9d;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
+  padding: 2rem;
 }
 
-.tc-images-container {
-  flex: 1;
-  overflow: hidden;
-  position: relative;
-}
-
-.tc-images-scroll {
-  display: flex;
-  animation: scroll 30s linear infinite;
-  gap: 20px;
-  padding: 10px 0;
-}
-
-.tc-image-card {
+.tc-menu {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #888888;
+}
+
+.tc-menu__item {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 1px solid #888888;
+}
+
+.tc-menu__item-link {
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
-  height: 180px;
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 15px;
-  flex-shrink: 0;
-}
-
-.tc-image-card:hover {
-  transform: translateY(-5px);
-}
-
-.tc-image-card img {
-  width: 120px;
   height: 120px;
-  object-fit: contain;
-  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 600;
+  color: #000;
+  font-size: 4vh;
 }
 
-.tc-image-card h2 {
-  font-size: 1rem;
-  color: #333;
-  margin: 0;
-  text-align: center;
+.tc-marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: #888888;
+  transform: translate3d(0, 101%, 0);
+  transition: transform 0.6s ease-expo;
 }
 
-@keyframes scroll {
-  0% {
+.tc-marquee__inner-wrap {
+  height: 100%;
+  width: 200%;
+  display: flex;
+  transform: translateX(0);
+}
+
+.tc-marquee__inner {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 200%;
+  will-change: transform;
+  animation: tc-marquee 15s linear infinite;
+}
+
+.tc-marquee span {
+  color: #fff;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 4vh;
+  line-height: 1.2;
+  padding: 1vh 1vw 0;
+}
+
+.tc-marquee__img {
+  width: 200px;
+  height: 7vh;
+  margin: 2em 2vw;
+  padding: 1em 0;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.tc-menu__item-link:hover + .tc-marquee {
+  transform: translate3d(0, 0%, 0);
+}
+
+@keyframes tc-marquee {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(calc(-100% / 2));
+
+  to {
+    transform: translateX(-50%);
   }
 }
 
-/* .tc-images-scroll:hover {
-  animation-play-state: paused;
-} */
-
-/* ----------------------- Responsive --------------- */
-@media (max-width: 1440px) {
-  .tc-inner-div {
-    width: 85%;
-  }
-}
-
-@media (max-width: 1024px) {
-  .tc-inner-div {
-    width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .tc-inner-div h1 {
+/* ------------------------------------ Responsive Style ------------------------- */
+@media (max-width: 500px) {
+  .tc-menu-wrap h4 {
     font-size: 1.5rem;
-    width: 150px;
-  }
-
-  .tc-image-card {
-    width: 150px;
-    height: 150px;
-  }
-
-  .tc-image-card img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-@media (max-width: 480px) {
-  .tc-inner-div {
-    width: 95%;
-    gap: 10px;
-    padding: 0;
-  }
-
-  .tc-inner-div h1 {
-    font-size: 1rem;
-    width: 100px;
-    padding: 1.5rem 1rem;
-  }
-
-  .tc-image-card {
-    width: 100px;
-    height: 110px;
-  }
-
-  .tc-image-card img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .tc-image-card h2 {
-    font-size: 0.9rem;
   }
 }
