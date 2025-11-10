@@ -4,6 +4,7 @@ import { FaMapSigns } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa6";
+import ShapeImage from "../../assets/images/shape-up.png";
 
 function CoreFeatures() {
   const sectionRef = useRef(null);
@@ -109,6 +110,8 @@ function CoreFeatures() {
           );
         })}
       </div>
+
+      <img className="core-features-image" src={ShapeImage} alt="" />
     </div>
   );
 }

@@ -39,6 +39,9 @@ function TopCategories() {
   return (
     <div className="tc-menu-wrap">
       <h4>Top Categories</h4>
+      <h1>
+        Explore Your Life, <span>Travel Where You Want!</span>
+      </h1>
       <nav className="tc-menu">
         {demoItems.map((item, idx) => (
           <MenuItem key={idx} {...item} />

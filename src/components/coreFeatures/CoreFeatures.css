@@ -1,11 +1,13 @@
 .core-features-container {
   width: 100%;
-  padding: 5rem 1rem;
+  padding-top: 5rem;
+  background: #f0f0f0;
 }
 
 .core-features-header {
   width: 60%;
   margin: 0 auto;
+  padding: 0 1rem;
   text-align: center;
 }
 
@@ -142,6 +144,12 @@
 }
 .core-features-card:nth-child(4) {
   transition-delay: 0.5s;
+}
+
+.core-features-image {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: -4px;
 }
 
 /* ----------------------- Responsive --------------- */
