@@ -4,6 +4,7 @@ import TopCategories from "../components/topCategories/TopCategories";
 import CoreFeatures from "../components/coreFeatures/CoreFeatures";
 import Testimonials from "../components/testimonials/Testimonials";
 import ScrollRevealSections from "../components/scrollRevealSections/ScrollRevealSections";
+import { Team } from "../components/team/Team";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <CoreFeatures />
       <TopDestinations />
       <TopCategories />
+      <Team />
       <Testimonials />
       <ScrollRevealSections />
     </div>
