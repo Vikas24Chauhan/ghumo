@@ -6,6 +6,7 @@
   overflow: hidden;
   position: relative;
   margin-bottom: 100px;
+  padding-top: 2rem;
 }
 
 @keyframes gridMove {
@@ -353,6 +354,13 @@
 
   .team-carousel-card.team-is-next {
     transform: scale(0.8) rotateY(-30deg) translateX(40px);
+  }
+}
+
+/* -------------------------- Responsive Style ---------------- */
+@media (max-width: 768px) {
+  .team-header {
+    width: 95%;
   }
 }
 

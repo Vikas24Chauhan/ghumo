@@ -7,7 +7,7 @@ import Member3 from "../../assets/images/member-3.jpg";
 import Member4 from "../../assets/images/member-4.jpg";
 import Member5 from "../../assets/images/member-5.jpg";
 
-export const Team = () => {
+const Team = () => {
   const [currentIndex, setCurrentIndex] = useState(2);
   const [isDragging, setIsDragging] = useState(false);
   const [startPos, setStartPos] = useState(0);
@@ -321,3 +321,5 @@ export const Team = () => {
     </div>
   );
 };
+
+export default Team;
