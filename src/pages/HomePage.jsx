@@ -5,6 +5,7 @@ import CoreFeatures from "../components/coreFeatures/CoreFeatures";
 import Testimonials from "../components/testimonials/Testimonials";
 import ScrollRevealSections from "../components/scrollRevealSections/ScrollRevealSections";
 import { Team } from "../components/team/Team";
+import Adventures from "../components/adventures/Adventures";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <TopDestinations />
       <TopCategories />
       <Team />
+      <Adventures />
       <Testimonials />
       <ScrollRevealSections />
     </div>
