@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import HomePage from "./pages/HomePage";
-import Places from "./components/places/Places";
+import PlacePages from "./pages/PlacePages";
 import Footer from "./components/footer/Footer";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/places" element={<Places />} />
+        <Route path="/places" element={<PlacePages />} />
       </Routes>
       <Footer />
     </BrowserRouter>

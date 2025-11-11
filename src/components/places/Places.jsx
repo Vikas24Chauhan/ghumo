@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Places.css";
-import { Search, Filter, MapPin, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import indianStates from "../../assets/data/allStates";
 
 function Places() {

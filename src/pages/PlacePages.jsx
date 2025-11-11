@@ -4,7 +4,7 @@ import Places from "../components/places/Places";
 function PlacePages() {
   return (
     <>
-      <PlacePages />
+      <Places />
     </>
   );
 }
