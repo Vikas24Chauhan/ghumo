@@ -14,8 +14,8 @@ export default function HomePage() {
       <CoreFeatures />
       <TopDestinations />
       <TopCategories />
-      <Team />
       <Adventures />
+      <Team />
       <Testimonials />
       <ScrollRevealSections />
     </div>

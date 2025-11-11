@@ -3,6 +3,7 @@ import "./Adventures.css";
 import Image1 from "../../assets/images/adventures-1.jpg";
 import Image2 from "../../assets/images/adventures-2.jpg";
 import Image3 from "../../assets/images/adventures-3.jpg";
+import ShapeDown from "../../assets/images/shape-down.png";
 
 const Adventures = () => {
   const cardsContainerRef = useRef(null);
@@ -153,6 +154,7 @@ const Adventures = () => {
 
   return (
     <div className="adventures-container">
+      <img className="adventures-shape-image" src={ShapeDown} alt="" />
       <div className="adventures-header">
         <h4>About Us</h4>
         <h1>

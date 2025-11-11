@@ -1,5 +1,11 @@
 .adventures-container {
   width: 100%;
+  background: #f0f0f0;
+}
+
+.adventures-shape-image {
+  width: 100%;
+  margin-bottom: -40px;
 }
 
 .adventures-header {
@@ -23,6 +29,12 @@
   color: #029e9d;
 }
 
+.adventures-cards {
+  width: 70%;
+  margin: 0 auto;
+  gap: 40px 0;
+}
+
 .adventures-card {
   position: sticky;
   top: 0;
@@ -37,12 +49,6 @@
   box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
   transform-origin: center top;
   margin-top: 2.5rem;
-}
-
-.adventures-cards {
-  width: 70%;
-  margin: 0 auto;
-  gap: 40px 0;
 }
 
 .adventures-card__image-container {
@@ -93,6 +99,10 @@
 }
 
 @media (max-width: 768px) {
+  .adventures-shape-image {
+    margin-bottom: 0px;
+  }
+
   .adventures-header {
     width: 90%;
   }
@@ -113,5 +123,13 @@
 
   .adventures-cards {
     width: 95%;
+  }
+
+  .adventures-card__inner {
+    flex-wrap: wrap;
+  }
+
+  .adventures-card__image-container {
+    width: 100%;
   }
 }
