@@ -6,7 +6,7 @@ import indianStates from "../../assets/data/allStates";
 function Places() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("all");
-  const [filteredStates, setFilteredStates] = useState([]);
+  const [filteredPlaces, setFilteredPlaces] = useState([]);
 
   // Filter options with icons
   const filters = [
@@ -23,26 +23,42 @@ function Places() {
   ];
 
   useEffect(() => {
-    let filtered = indianStates;
+    // Flatten all places from all states with state information
+    let allPlaces = [];
+    indianStates.forEach((state) => {
+      state.places.forEach((place) => {
+        allPlaces.push({
+          ...place,
+          stateName: state.name,
+          stateId: state.id,
+        });
+      });
+    });
 
+    let filtered = allPlaces;
+
+    // Search filter
     if (searchTerm) {
       filtered = filtered.filter(
-        (state) =>
-          state.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          state.popularPlace.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          state.description.toLowerCase().includes(searchTerm.toLowerCase())
+        (place) =>
+          place.stateName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          place.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          place.description.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
+    // Category filter
     if (selectedFilter !== "all") {
-      filtered = filtered.filter((state) => state.category === selectedFilter);
+      filtered = filtered.filter((place) => place.category === selectedFilter);
     }
 
-    setFilteredStates(filtered);
+    setFilteredPlaces(filtered);
   }, [searchTerm, selectedFilter]);
 
-  const handleStateClick = (stateId) => {
-    window.location.href = `/state/${stateId}`;
+  const handlePlaceClick = (stateId, placeName) => {
+    window.location.href = `/state/${stateId}?place=${encodeURIComponent(
+      placeName
+    )}`;
   };
 
   return (
@@ -50,8 +66,20 @@ function Places() {
       <div className="places-header">
         <h2>Popular Destinations</h2>
         <p>
-          {filteredStates.length} of {indianStates.length} Indian states
+          {filteredPlaces.length} destinations across {indianStates.length}{" "}
+          Indian states
         </p>
+      </div>
+
+      {/* Search Bar */}
+      <div className="places-search-container">
+        <input
+          type="text"
+          className="places-search-input"
+          placeholder="Search by state, place, or description..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </div>
 
       {/* Enhanced Category Filter with Icons */}
@@ -73,29 +101,29 @@ function Places() {
       </div>
 
       <div className="places-states-container">
-        {filteredStates.map((state, index) => (
+        {filteredPlaces.map((place, index) => (
           <div
-            key={state.id}
+            key={`${place.stateId}-${place.name}`}
             className="places-state-card"
-            onClick={() => handleStateClick(state.id)}
-            style={{ animationDelay: `${index * 0.1}s` }}
+            onClick={() => handlePlaceClick(place.stateId, place.name)}
+            style={{ animationDelay: `${index * 0.05}s` }}
           >
             <div className="places-card-image">
-              <img src={state.image} alt={state.popularPlace} />
+              <img src={place.image} alt={place.name} />
               <div className="places-card-overlay">
                 <div className="places-rating">
                   <Star className="places-star-icon" size={14} />
-                  <span>{state.rating}</span>
+                  <span>{place.rating}</span>
                 </div>
               </div>
             </div>
             <div className="places-card-content">
-              <h3 className="places-state-name">{state.name}</h3>
-              <p className="places-popular-place">{state.popularPlace}</p>
-              <p className="places-description">{state.description}</p>
+              <h3 className="places-state-name">{place.stateName}</h3>
+              <p className="places-popular-place">{place.name}</p>
+              <p className="places-description">{place.description}</p>
               <div className="places-card-footer">
-                <span className={`places-category-tag ${state.category}`}>
-                  {state.category}
+                <span className={`places-category-tag ${place.category}`}>
+                  {place.category}
                 </span>
                 <span className="places-explore-text">Explore →</span>
               </div>
@@ -104,9 +132,9 @@ function Places() {
         ))}
       </div>
 
-      {filteredStates.length === 0 && (
+      {filteredPlaces.length === 0 && (
         <div className="places-no-results">
-          <h3>No states found</h3>
+          <h3>No destinations found</h3>
           <p>Try adjusting your search or filter criteria</p>
         </div>
       )}
