@@ -8,10 +8,18 @@ function Places() {
   const [selectedFilter, setSelectedFilter] = useState("all");
   const [filteredStates, setFilteredStates] = useState([]);
 
-  // Extract unique categories from indianStates
-  const categories = [
-    "all",
-    ...new Set(indianStates.map((state) => state.category)),
+  // Filter options with icons
+  const filters = [
+    { id: "all", label: "All", icon: "🔵" },
+    { id: "spiritual", label: "Spiritual", icon: "🪷" },
+    { id: "mountain", label: "Mountain", icon: "⛰️" },
+    { id: "nature", label: "Nature", icon: "🌿" },
+    { id: "beach", label: "Beach", icon: "☀️" },
+    { id: "desert", label: "Desert", icon: "🌵" },
+    { id: "city", label: "City", icon: "🏛️" },
+    { id: "culture", label: "Culture", icon: "🎭" },
+    { id: "heritage", label: "Heritage", icon: "🏛️" },
+    { id: "wildlife", label: "Wildlife", icon: "🦁" },
   ];
 
   useEffect(() => {
@@ -46,18 +54,19 @@ function Places() {
         </p>
       </div>
 
-      {/* Category Filter */}
+      {/* Enhanced Category Filter with Icons */}
       <div className="places-filter-container">
-        <div className="places-category-filters">
-          {categories.map((category) => (
+        <div className="places-filter-wrapper">
+          {filters.map((filter) => (
             <button
-              key={category}
-              className={`places-category-filter-btn ${
-                selectedFilter === category ? "active" : ""
+              key={filter.id}
+              className={`places-filter-button ${
+                selectedFilter === filter.id ? "active" : ""
               }`}
-              onClick={() => setSelectedFilter(category)}
+              onClick={() => setSelectedFilter(filter.id)}
             >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
+              <span className="places-filter-icon">{filter.icon}</span>
+              <span className="places-filter-label">{filter.label}</span>
             </button>
           ))}
         </div>
@@ -78,15 +87,12 @@ function Places() {
                   <Star className="places-star-icon" size={14} />
                   <span>{state.rating}</span>
                 </div>
-                {/* <MapPin className="map-icon" size={18} /> */}
               </div>
             </div>
-
             <div className="places-card-content">
               <h3 className="places-state-name">{state.name}</h3>
               <p className="places-popular-place">{state.popularPlace}</p>
               <p className="places-description">{state.description}</p>
-
               <div className="places-card-footer">
                 <span className={`places-category-tag ${state.category}`}>
                   {state.category}
