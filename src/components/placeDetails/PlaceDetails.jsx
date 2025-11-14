@@ -9,14 +9,14 @@ const PlaceDetails = () => {
   return (
     <div className="place-details-container">
       {/* Hero Section */}
-      <div className="hero-section">
-        <div className="hero-overlay" />
-        <div className="hero-content">
-          <h1 className="hero-title">{placeData.name}</h1>
-          <p className="hero-subtitle">{placeData.tagline}</p>
-          <div className="hero-badges">
+      <div className="place-details-hero-section">
+        <div className="place-details-hero-overlay" />
+        <div className="place-details-hero-content">
+          <h1 className="place-details-hero-title">{placeData.name}</h1>
+          <p className="place-details-hero-subtitle">{placeData.tagline}</p>
+          <div className="place-details-hero-badges">
             {placeData.badges.map((badge, index) => (
-              <span key={index} className="badge">
+              <span key={index} className="place-details-badge">
                 {badge}
               </span>
             ))}
@@ -25,59 +25,75 @@ const PlaceDetails = () => {
       </div>
 
       {/* Navigation Tabs */}
-      <div className="tabs-container">
-        <button
-          className={`tab ${activeTab === "about" ? "active" : ""}`}
-          onClick={() => setActiveTab("about")}
-        >
-          About
-        </button>
-        <button
-          className={`tab ${activeTab === "visit" ? "active" : ""}`}
-          onClick={() => setActiveTab("visit")}
-        >
-          Visit Info
-        </button>
-        <button
-          className={`tab ${activeTab === "gallery" ? "active" : ""}`}
-          onClick={() => setActiveTab("gallery")}
-        >
-          Gallery
-        </button>
+      <div className="place-details-tabs-container">
+        <div className="place-details-tabs-wrapper">
+          <button
+            className={`place-details-tab ${
+              activeTab === "about" ? "active" : ""
+            }`}
+            onClick={() => setActiveTab("about")}
+          >
+            About
+          </button>
+          <button
+            className={`place-details-tab ${
+              activeTab === "visit" ? "active" : ""
+            }`}
+            onClick={() => setActiveTab("visit")}
+          >
+            Visit Info
+          </button>
+          <button
+            className={`place-details-tab ${
+              activeTab === "gallery" ? "active" : ""
+            }`}
+            onClick={() => setActiveTab("gallery")}
+          >
+            Gallery
+          </button>
+        </div>
       </div>
 
       {/* Content Section */}
-      <div className="content-section">
+      <div className="place-details-content-section">
         {activeTab === "about" && (
-          <div className="about-content fade-in">
-            <div className="content-grid">
-              <div className="text-content">
-                <h2 className="section-title">About {placeData.name}</h2>
+          <div className="place-details-about-content place-details-fade-in">
+            <div className="place-details-content-grid">
+              <div className="place-details-text-content">
+                <h2 className="place-details-section-title">
+                  About {placeData.name}
+                </h2>
                 {placeData.about.description.map((paragraph, index) => (
-                  <p key={index} className="description">
+                  <p key={index} className="place-details-description">
                     {paragraph}
                   </p>
                 ))}
 
-                <h3 className="subsection-title">Key Highlights</h3>
-                <ul className="highlights-list">
+                <h3 className="place-details-subsection-title">
+                  Key Highlights
+                </h3>
+                <ul className="place-details-highlights-list">
                   {placeData.about.highlights.map((highlight, index) => (
-                    <li key={index} className="highlight-item">
-                      <span className="highlight-icon">✨</span>
+                    <li key={index} className="place-details-highlight-item">
+                      <span className="place-details-highlight-icon">✨</span>
                       {highlight}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="best-time-card">
-                <h3 className="card-title">{placeData.bestTime.title}</h3>
-                <div className="time-info">
+              <div className="place-details-best-time-card">
+                <h3 className="place-details-card-title">
+                  {placeData.bestTime.title}
+                </h3>
+                <div className="place-details-time-info">
                   {placeData.bestTime.seasons.map((season, index) => (
                     <div
                       key={index}
                       className={
-                        season.type === "avoid" ? "avoid-season" : "season"
+                        season.type === "place-details-avoid"
+                          ? "place-details-avoid-season"
+                          : "place-details-season"
                       }
                     >
                       <h4>{season.title}</h4>
@@ -91,23 +107,27 @@ const PlaceDetails = () => {
         )}
 
         {activeTab === "visit" && (
-          <div className="visit-content fade-in">
-            <h2 className="section-title">Visiting Information</h2>
-            <div className="info-grid">
+          <div className="place-details-visit-content place-details-fade-in">
+            <h2 className="place-details-section-title">
+              Visiting Information
+            </h2>
+            <div className="place-details-info-grid">
               {placeData.visitingInfo.map((info, index) => (
-                <div key={index} className="info-card">
-                  <div className="info-icon">{info.icon}</div>
+                <div key={index} className="place-details-info-card">
+                  <div className="place-details-info-icon">{info.icon}</div>
                   <h3>{info.title}</h3>
                   <p>{info.detail}</p>
                 </div>
               ))}
             </div>
 
-            <div className="location-section">
-              <h3 className="subsection-title">{placeData.howToReach.title}</h3>
-              <div className="location-grid">
+            <div className="place-details-location-section">
+              <h3 className="place-details-subsection-title">
+                {placeData.howToReach.title}
+              </h3>
+              <div className="place-details-location-grid">
                 {placeData.howToReach.methods.map((method, index) => (
-                  <div key={index} className="location-card">
+                  <div key={index} className="place-details-location-card">
                     <h4>{method.mode}</h4>
                     <p>{method.description}</p>
                   </div>
@@ -115,9 +135,11 @@ const PlaceDetails = () => {
               </div>
             </div>
 
-            <div className="tips-section">
-              <h3 className="subsection-title">{placeData.travelTips.title}</h3>
-              <ul className="tips-list">
+            <div className="place-details-tips-section">
+              <h3 className="place-details-subsection-title">
+                {placeData.travelTips.title}
+              </h3>
+              <ul className="place-details-tips-list">
                 {placeData.travelTips.tips.map((tip, index) => (
                   <li key={index}>{tip}</li>
                 ))}
@@ -127,19 +149,16 @@ const PlaceDetails = () => {
         )}
 
         {activeTab === "gallery" && (
-          <div className="gallery-content fade-in">
-            <h2 className="section-title">Photo Gallery</h2>
-            <div className="gallery-grid">
+          <div className="place-details-gallery-content place-details-fade-in">
+            <h2 className="place-details-section-title">Photo Gallery</h2>
+            <div className="place-details-gallery-grid">
               {placeData.gallery.map((image) => (
                 <div
                   key={image.id}
-                  className="gallery-item"
+                  className="place-details-gallery-item"
                   onClick={() => setSelectedImage(image)}
                 >
                   <img src={image.url} alt={image.caption} />
-                  <div className="gallery-overlay">
-                    <p>{image.caption}</p>
-                  </div>
                 </div>
               ))}
             </div>
@@ -147,26 +166,10 @@ const PlaceDetails = () => {
         )}
       </div>
 
-      {/* Image Modal */}
-      {selectedImage && (
-        <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="modal-close"
-              onClick={() => setSelectedImage(null)}
-            >
-              ×
-            </button>
-            <img src={selectedImage.url} alt={selectedImage.caption} />
-            <p className="modal-caption">{selectedImage.caption}</p>
-          </div>
-        </div>
-      )}
-
       {/* Footer */}
-      <footer className="footer">
+      <footer className="place-details-footer">
         <p>{placeData.footer.message}</p>
-        <p className="footer-note">{placeData.footer.note}</p>
+        <p className="place-details-footer-note">{placeData.footer.note}</p>
       </footer>
     </div>
   );

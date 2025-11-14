@@ -1,5 +1,3 @@
-// Place Details Data - Multiple Destinations
-
 // Taj Mahal Data
 export const tajMahalData = {
   // Basic Information
@@ -115,32 +113,26 @@ export const tajMahalData = {
     {
       id: 1,
       url: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800",
-      caption: "Taj Mahal at Sunrise",
     },
     {
       id: 2,
       url: "https://images.unsplash.com/photo-1548013146-72479768bada?w=800",
-      caption: "Front View",
     },
     {
       id: 3,
       url: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800",
-      caption: "Reflection Pool",
     },
     {
       id: 4,
       url: "https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=800",
-      caption: "Intricate Details",
     },
     {
       id: 5,
       url: "https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=800",
-      caption: "Evening View",
     },
     {
       id: 6,
       url: "https://images.unsplash.com/photo-1609920658906-8223bd289001?w=800",
-      caption: "Garden Pathway",
     },
   ],
 
@@ -278,32 +270,26 @@ export const jaipurData = {
     {
       id: 1,
       url: "https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?w=800",
-      caption: "Hawa Mahal - Palace of Winds",
     },
     {
       id: 2,
       url: "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800",
-      caption: "Amber Fort at Sunset",
     },
     {
       id: 3,
       url: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800",
-      caption: "City Palace Complex",
     },
     {
       id: 4,
       url: "https://images.unsplash.com/photo-1608131290715-88fb1ead5b52?w=800",
-      caption: "Jal Mahal - Water Palace",
     },
     {
       id: 5,
       url: "https://images.unsplash.com/photo-1598343092962-c2f1c9b72457?w=800",
-      caption: "Pink City Streets",
     },
     {
       id: 6,
       url: "https://images.unsplash.com/photo-1623071786146-e11f0937bc1e?w=800",
-      caption: "Jantar Mantar Observatory",
     },
   ],
 
