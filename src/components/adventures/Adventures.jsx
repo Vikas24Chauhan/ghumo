@@ -132,7 +132,7 @@ const Adventures = () => {
       title: "Get To Know Us",
       subTitle: "Explore All Tour of the world with us.",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta error nam eaque. Eum fuga laborum quos expedita iste saepe similique, unde possimus quia at magnam sed cupiditate? Reprehenderit, harum!",
+        "your trusted guide to the most incredible destinations. While our passion began with uncovering the diverse beauty and rich heritage of India—from the serene backwaters of Kerala to the majestic Himalayas—our vision extends globally. We are a team of avid travelers, local experts, and storytelling enthusiasts dedicated to crafting journeys that are not just trips, but transformative experiences.",
     },
     {
       id: 2,
@@ -140,7 +140,7 @@ const Adventures = () => {
       title: "Love Where Your're Going",
       subTitle: "Explore Your Life, Travel Where You Want!",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta error nam eaque. Eum fuga laborum quos expedita iste saepe similique, unde possimus quia at magnam sed cupiditate? Reprehenderit, harum!",
+        "Travel is more than just crossing destinations off a list; it’s about rediscovering yourself. It's about that moment when the sun rises over the Himalayas, the aroma of spices hits you in a bustling market, or you finally stand before a monument you've only seen in books. We understand that the perfect trip isn't just about the place—it's about how that place makes you feel.",
     },
     {
       id: 3,
@@ -148,7 +148,7 @@ const Adventures = () => {
       title: "Explore The World",
       subTitle: "Start Planning Your Dream Trip Today!",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta error nam eaque. Eum fuga laborum quos expedita iste saepe similique, unde possimus quia at magnam sed cupiditate? Reprehenderit, harum!",
+        "India is a continent of experiences, and the world is waiting! We've simplified the planning process so you can focus on the excitement of your upcoming adventure, not the stress of logistics. Your dream trip, whether to the ancient temples of South India or the glaciers of the North, is just three steps away.",
     },
   ];
 

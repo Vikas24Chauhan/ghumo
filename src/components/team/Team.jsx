@@ -24,50 +24,35 @@ const Team = () => {
       name: "Member 1",
       title: "Head Officer",
       image: Member3,
-      description:
-        "The TEN HR Consulting website is offering you Entrepreneurship Network’s HR services. The TEN-HR-Consulting website is proud to offer HR services from The Entrepreneurship Network, providing expert solutions to support your business's growth and success.",
-      color: "cyan",
-      link: "https://ten-hr-consulting-self.vercel.app/",
+      description: "",
     },
     {
       id: 2,
       name: "Member 2",
       title: "Senior Agent",
       image: Member2,
-      description:
-        "TEN Funding is the ultimate platform for exploring the investors backing The Entrepreneurship Network (TEN). It connects aspiring entrepreneurs with the funding ecosystem that powers TEN's innovative team. By bridging the gap between visionaries and financial support, TEN Funding fosters a thriving entrepreneurial community.",
-      color: "blue",
-      link: "https://ten-funding-lime.vercel.app/",
+      description: "",
     },
     {
       id: 3,
       name: "Member 3",
       title: "Founder",
       image: Member1,
-      description:
-        "Developed a web-based application that converts text into images, allowing users to generate visually appealing text-based graphics. The data utilizes modern web technologies, including React.js for the frontend and Node.js for backend processing. Implemented features such as customizable fonts, colors, and backgrounds to enhance user creativity. Designed an intuitive UI for seamless user experience and optimized performance for fast image generation.",
-      color: "purple",
-      link: "https://imagify-ten-mu.vercel.app/",
+      description: "",
     },
     {
       id: 4,
       name: "Member 4",
       title: "Supervisor",
       image: Member4,
-      description:
-        "This website is a comprehensive resource dedicated to Baby Brain Development, offering valuable guidance to help parents nurture their child's cognitive and intellectual growth. With expert mentors available, parents can receive personalized support and scientifically-backed strategies tailored to their baby's developmental stage. The platform covers a wide range of topics, including sensory development, early learning techniques, memory-building activities, and language skills enhancement.",
-      color: "amber",
-      link: "https://ten-toddlers-mu.vercel.app/",
+      description: "",
     },
     {
       id: 5,
       name: "Member 5",
       title: "Quality Assurance",
       image: Member5,
-      description:
-        "Welcome to our College Website, your go-to resource for comprehensive information about our institution. Explore our academic programs, campus life, admissions process, and more. Whether you're a prospective student or just curious about what we offer, you'll find everything you need to know right here.",
-      color: "emerald",
-      link: "https://vikas24chauhan.github.io/edusity/",
+      description: "",
     },
   ];
 
@@ -235,10 +220,11 @@ const Team = () => {
           Meet Our <span>Excellent Guides</span>
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore.
+          We believe the heart of an unforgettable journey lies with the people
+          who lead it. Our guides are not just escorts; they are licensed
+          historians, cultural interpreters, and passionate local storytellers
+          who breathe life into every destination. They are the reason our
+          guests don't just see India, they feel it.
         </p>
       </div>
 
