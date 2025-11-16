@@ -87,10 +87,11 @@ function CoreFeatures() {
           Find <span>Travel Perfection</span>
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore.
+          Welcome to the definitive guide for exploring India's most iconic and
+          beautiful destinations. We offer expertly curated, in-depth
+          information, stunning visuals, and essential insights to help you
+          conceptualize and plan your perfect journey across the subcontinent's
+          diverse states and cultures.
         </p>
       </div>
 
