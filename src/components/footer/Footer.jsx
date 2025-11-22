@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { FiHome, FiSettings, FiBook, FiUser } from "react-icons/fi";
+import { FiHome, FiMapPin, FiInfo, FiMail } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 function Footer() {
@@ -12,18 +12,18 @@ function Footer() {
       </NavLink>
 
       <NavLink to="/places" className="footer-icon-wrapper">
-        <FiBook className="footer-icons" />
-        <span className="footer-icon-tooltip">Blog</span>
+        <FiMapPin className="footer-icons" />
+        <span className="footer-icon-tooltip">Places</span>
       </NavLink>
 
-      <NavLink className="footer-icon-wrapper">
-        <FiUser className="footer-icons" />
-        <span className="footer-icon-tooltip">About</span>
+      <NavLink to="/about" className="footer-icon-wrapper">
+        <FiInfo className="footer-icons" />
+        <span className="footer-icon-tooltip">About Us</span>
       </NavLink>
 
-      <NavLink className="footer-icon-wrapper">
-        <FiSettings className="footer-icons" />
-        <span className="footer-icon-tooltip">Settings</span>
+      <NavLink to="/contact" className="footer-icon-wrapper">
+        <FiMail className="footer-icons" />
+        <span className="footer-icon-tooltip">Contact Us</span>
       </NavLink>
     </div>
   );
