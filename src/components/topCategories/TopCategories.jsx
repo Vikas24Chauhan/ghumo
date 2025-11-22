@@ -1,38 +1,42 @@
 import React from "react";
 import { gsap } from "gsap";
 import "./TopCategories.css";
+import Safari from "../../assets/images/safari.jpg";
+import Cycling from "../../assets/images/cycling.jpg";
+import Camping from "../../assets/images/camping.jpg";
+import Hiking from "../../assets/images/hiking.jpg";
 
 function TopCategories() {
   const demoItems = [
     {
       link: "#",
       text: "Safari",
-      image: "https://picsum.photos/600/400?random=1",
+      image: Safari,
     },
     {
       link: "#",
       text: "Cycling",
-      image: "https://picsum.photos/600/400?random=2",
+      image: Cycling,
     },
     {
       link: "#",
       text: "Camping",
-      image: "https://picsum.photos/600/400?random=3",
+      image: Camping,
     },
-    {
-      link: "#",
-      text: "Surf",
-      image: "https://picsum.photos/600/400?random=4",
-    },
-    {
-      link: "#",
-      text: "Sunbed",
-      image: "https://picsum.photos/600/400?random=1",
-    },
+    // {
+    //   link: "#",
+    //   text: "Surf",
+    //   image: "https://picsum.photos/600/400?random=4",
+    // },
+    // {
+    //   link: "#",
+    //   text: "Sunbed",
+    //   image: "https://picsum.photos/600/400?random=1",
+    // },
     {
       link: "#",
       text: "Hiking",
-      image: "https://picsum.photos/600/400?random=2",
+      image: Hiking,
     },
   ];
 

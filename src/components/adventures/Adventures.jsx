@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./Adventures.css";
-import Image1 from "../../assets/images/adventures-1.jpg";
-import Image2 from "../../assets/images/adventures-2.jpg";
-import Image3 from "../../assets/images/adventures-3.jpg";
+import Image1 from "../../assets/images/adventures-1.png";
+import Image2 from "../../assets/images/adventures-2.png";
+import Image3 from "../../assets/images/adventures-3.png";
 import ShapeDown from "../../assets/images/shape-down.png";
 
 const Adventures = () => {

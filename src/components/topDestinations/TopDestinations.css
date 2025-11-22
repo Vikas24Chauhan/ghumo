@@ -96,7 +96,11 @@
   display: block;
 }
 
-.td-content .td-name {
+.td-name {
+  display: inline;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background-color: #2d2d2d;
   font-size: 40px;
   text-transform: uppercase;
   font-weight: bold;
@@ -104,7 +108,11 @@
   animation: animate 1s ease-in-out 1 forwards;
 }
 
-.td-content .td-des {
+.td-des {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background-color: #2d2d2d;
   margin-top: 10px;
   margin-bottom: 20px;
   opacity: 0;

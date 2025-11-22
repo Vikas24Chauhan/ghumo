@@ -59,14 +59,14 @@
   top: -50px;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   font-size: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 10px solid #afb7c0;
+  border: 2px solid #afb7c0;
 }
 
 .testimonials-image img {

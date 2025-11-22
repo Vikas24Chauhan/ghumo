@@ -60,10 +60,10 @@ function Testimonials() {
           Good Reviews By <span>Clients</span>
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore.
+          See what satisfied travelers are saying! Our users trust us to provide
+          accurate, up-to-date, and inspiring information for their journeys
+          across India. Read genuine reviews to see how our guides helped them
+          discover the best of the subcontinent.
         </p>
       </div>
 

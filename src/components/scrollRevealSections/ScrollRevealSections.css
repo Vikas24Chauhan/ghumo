@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Courgette|Roboto");
-
 .scroll-reveal-container {
   width: 100%;
 }
@@ -148,7 +146,6 @@
 }
 
 .scroll-reveal-content p {
-  font-family: "Roboto", sans-serif;
   font-size: 1.25rem;
   line-height: 1.5;
 }

@@ -57,25 +57,25 @@ function CoreFeatures() {
       id: 1,
       icon: FaFlag,
       title: "Tell Us What You want To Do",
-      desp: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+      desp: "Filter destinations by your interest (adventure, history, culture). Find instant, tailored articles and guides for your dream Indian experience.",
     },
     {
       id: 2,
       icon: FaMapMarkerAlt,
       title: "Share Your Travel Locations",
-      desp: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+      desp: "Select any region in India. Get comprehensive guides on local attractions, transport options, and essential visitor logistics for that specific area.",
     },
     {
       id: 3,
       icon: FaMapSigns,
       title: "Share Your Travel Preference",
-      desp: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+      desp: "Set your travel style (budget, luxury, pace). Access customized tips and resources curated specifically to match your preferred way of exploring India.",
     },
     {
       id: 4,
       icon: FaGlobe,
       title: "Here 100% Trusted Tour Agency",
-      desp: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+      desp: "We provide vetted links and contacts for Government-approved local operators and guides. Find trusted third-party resources for your safe travel booking needs.",
     },
   ];
 

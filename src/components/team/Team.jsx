@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Team.css";
 import { NavLink } from "react-router-dom";
-import Member1 from "../../assets/images/member-1.jpg";
-import Member2 from "../../assets/images/member-2.jpg";
-import Member3 from "../../assets/images/member-3.jpg";
-import Member4 from "../../assets/images/member-4.jpg";
-import Member5 from "../../assets/images/member-5.jpg";
+import Member1 from "../../assets/images/member-1.webp";
+import Member2 from "../../assets/images/member-2.webp";
+import Member3 from "../../assets/images/member-3.webp";
+import Member4 from "../../assets/images/member-4.webp";
+import Member5 from "../../assets/images/member-5.webp";
 
 const Team = () => {
   const [currentIndex, setCurrentIndex] = useState(2);
