@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import Places from "./components/places/Places";
 import PlaceDetails from "./components/placeDetails/PlaceDetails";
 import About from "./components/about/About";
+import ContactUs from "./components/contactUs/ContactUs";
 import Footer from "./components/footer/Footer";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/places" element={<Places />} />
         <Route path="/place-details" element={<PlaceDetails />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
       <Footer />
     </BrowserRouter>

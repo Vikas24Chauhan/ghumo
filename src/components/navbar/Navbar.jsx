@@ -27,10 +27,10 @@ function Navbar() {
         <NavLink to="/places" onClick={handleCloseNav}>
           Places
         </NavLink>
-        <NavLink to="/about" onClick={handleCloseNav}>
+        <NavLink to="/about-us" onClick={handleCloseNav}>
           AboutUs
         </NavLink>
-        <NavLink to="/contact" onClick={handleCloseNav}>
+        <NavLink to="/contact-us" onClick={handleCloseNav}>
           ContactUs
         </NavLink>
       </nav>
