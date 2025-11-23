@@ -161,87 +161,99 @@ const About = () => {
     <main className="about-main" ref={mainRef}>
       <div className="about-container" ref={scrollContainerRef}>
         <h1 className="about-heading">
-          Perspective Zoom Effect
+          Beyond the Brochure
           <br />
-          on Scroll
+          Why Choose Our Guides?
         </h1>
+
+        {/* --- Layer 2 Images (Middle Ground) --- */}
         <div className="about-item" data-layer="2">
           <img
-            src="https://assets.codepen.io/204808/eugene-chystiakov-W6FESrD-M50-unsplash.jpg"
-            alt=""
-          />
-        </div>
-        <div className="about-item" data-layer="2">
-          <img
-            src="https://assets.codepen.io/204808/hendo-wang-DsGeUBaJPwc-unsplash.jpg"
-            alt=""
-          />
-        </div>
-        <div className="about-item" data-layer="1">
-          <img
-            src="https://assets.codepen.io/204808/taylor-sondgeroth-ltsKOg_q_Gc-unsplash.jpg"
-            alt=""
+            src="https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="The Taj Mahal, Agra"
           />
         </div>
         <div className="about-item" data-layer="2">
           <img
-            src="https://assets.codepen.io/204808/shayna-douglas-w2tG22s8hEc-unsplash.jpg"
-            alt=""
-          />
-        </div>
-        <div className="about-item" data-layer="3">
-          <img
-            src="https://assets.codepen.io/204808/samantha-fortney-o8CA1Kj8TJU-unsplash.jpg"
-            alt=""
-          />
-        </div>
-        <div className="about-item" data-layer="1">
-          <img
-            src="https://assets.codepen.io/204808/jakub-dziubak-wvXG_7ebZ18-unsplash.jpg"
-            alt=""
-          />
-        </div>
-        <div className="about-item" data-layer="3">
-          <img
-            src="https://assets.codepen.io/204808/golden-retriever-3.png"
-            alt=""
-          />
-        </div>
-        <div className="about-item" data-layer="3">
-          <img
-            src="https://assets.codepen.io/204808/golden-retriever-2.png"
-            alt=""
-          />
-        </div>
-        <div className="about-item" data-layer="1">
-          <img
-            src="https://assets.codepen.io/204808/golden-retriever-1.png"
-            alt=""
-          />
-        </div>
-        <div className="about-item" data-layer="3">
-          <img
-            src="https://assets.codepen.io/204808/richard-brutyo-Sg3XwuEpybU.jpg"
-            alt=""
+            src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Varanasi Ghats on the Ganges"
           />
         </div>
         <div className="about-item" data-layer="2">
           <img
-            src="https://assets.codepen.io/204808/berkay-gumustekin-ngqyo2AYYnE.jpg"
-            alt=""
+            src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Kerala Backwaters Houseboat"
+          />
+        </div>
+        <div className="about-item" data-layer="2">
+          <img
+            src="https://images.unsplash.com/photo-1595328768079-4475f947e178?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Red Fort architecture, Delhi"
+          />
+        </div>
+
+        {/* --- Layer 1 Images (Background - Furthest away) --- */}
+        <div className="about-item" data-layer="1">
+          <img
+            src="https://images.unsplash.com/photo-1589875768796-42eb4a4fb2c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Pangong Tso Lake, Ladakh Himalayas"
           />
         </div>
         <div className="about-item" data-layer="1">
           <img
-            src="https://assets.codepen.io/204808/zach-shup-R6SdnJnLJEg.jpg"
-            alt=""
+            src="https://images.unsplash.com/photo-1583142936987-b26010d753ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Mysore Palace illuminated at dusk"
+          />
+        </div>
+        <div className="about-item" data-layer="1">
+          <img
+            src="https://images.unsplash.com/photo-1620766165457-a8085a048139?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Stone Chariot at Hampi"
+          />
+        </div>
+        <div className="about-item" data-layer="1">
+          <img
+            src="https://images.unsplash.com/photo-1582504331506-6e643393517c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Colorful Gopuram of Meenakshi Temple, Madurai"
+          />
+        </div>
+
+        {/* --- Layer 3 Images (Foreground - Closest) --- */}
+        <div className="about-item" data-layer="3">
+          <img
+            src="https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Hawa Mahal windows, Jaipur"
+          />
+        </div>
+        <div className="about-item" data-layer="3">
+          <img
+            src="https://images.unsplash.com/photo-1587474260584-1f5042c53b72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Golden Temple (Harmandir Sahib), Amritsar"
+          />
+        </div>
+        <div className="about-item" data-layer="3">
+          <img
+            src="https://images.unsplash.com/photo-1570168007204-dfc528389003?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Gateway of India, Mumbai"
+          />
+        </div>
+        <div className="about-item" data-layer="3">
+          <img
+            src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Goa beach with palm trees"
           />
         </div>
       </div>
+
       <section className="about-section-stick">
         <p className="about-opacity-reveal">
-          If you're lucky, a Golden Retriever will come into your life, steal
-          your heart, and change everything.
+          We are not a travel agency; we are your dedicated resource for
+          everything India. Our mission is simple: to inspire and equip every
+          traveler with the most accurate, up-to-date, and insightful
+          information about India's diverse and magnificent destinations. From
+          the ancient history of the Golden Triangle to the serene beauty of the
+          Kerala backwaters, we exist to help you move from dream to detailed
+          plan.
         </p>
       </section>
     </main>
