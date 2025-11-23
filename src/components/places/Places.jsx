@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Places.css";
 import { Star } from "lucide-react";
 import indianStates from "../../assets/data/allStates";
 
 function Places() {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("all");
   const [filteredPlaces, setFilteredPlaces] = useState([]);
@@ -56,9 +58,8 @@ function Places() {
   }, [searchTerm, selectedFilter]);
 
   const handlePlaceClick = (stateId, placeName) => {
-    window.location.href = `/state/${stateId}?place=${encodeURIComponent(
-      placeName
-    )}`;
+    // Navigate to place details page with place name
+    navigate(`/place/${encodeURIComponent(placeName)}`);
   };
 
   return (

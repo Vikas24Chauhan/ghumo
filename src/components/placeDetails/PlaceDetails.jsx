@@ -1,10 +1,93 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import "./PlaceDetails.css";
-import placeData from "../../assets/data/placeDetailsData";
+import { getPlaceData } from "../../assets/data/placeDetailsData";
 
 const PlaceDetails = () => {
   const [activeTab, setActiveTab] = useState("about");
   const [selectedImage, setSelectedImage] = useState(null);
+  const [placeData, setPlaceData] = useState(null);
+  const [notFound, setNotFound] = useState(false);
+
+  const { placeName } = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Get place name from URL params or query string
+    const searchParams = new URLSearchParams(location.search);
+    const placeFromQuery = searchParams.get("place");
+    const currentPlaceName = placeName || placeFromQuery;
+
+    console.log("Looking for place:", currentPlaceName); // Debug log
+
+    // Get the place data
+    const data = getPlaceData(currentPlaceName);
+
+    if (data) {
+      setPlaceData(data);
+      setNotFound(false);
+    } else {
+      setNotFound(true);
+      setPlaceData(null);
+    }
+  }, [placeName, location]);
+
+  if (notFound) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          minHeight: "60vh",
+          padding: "2rem",
+          textAlign: "center",
+        }}
+      >
+        <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>🏛️</h1>
+        <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
+          Place Details Not Available
+        </h2>
+        <p style={{ fontSize: "1.1rem", color: "#666", marginBottom: "2rem" }}>
+          Sorry, we don't have detailed information for "
+          <strong>{placeName}</strong>" yet.
+          <br />
+          We're working on adding more destinations!
+        </p>
+        <button
+          onClick={() => navigate("/places")}
+          style={{
+            padding: "0.75rem 2rem",
+            fontSize: "1rem",
+            backgroundColor: "#007bff",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+          }}
+        >
+          ← Back to All Places
+        </button>
+      </div>
+    );
+  }
+
+  if (!placeData) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          minHeight: "60vh",
+        }}
+      >
+        <h2>Loading...</h2>
+      </div>
+    );
+  }
 
   return (
     <div className="place-details-container">
@@ -91,7 +174,7 @@ const PlaceDetails = () => {
                     <div
                       key={index}
                       className={
-                        season.type === "place-details-avoid"
+                        season.type === "avoid"
                           ? "place-details-avoid-season"
                           : "place-details-season"
                       }

@@ -1181,7 +1181,7 @@ const indianStates = [
     name: "Rajasthan",
     places: [
       {
-        name: "Jaipur - Pink City",
+        name: "Jaipur",
         image:
           "https://images.unsplash.com/photo-1609920658906-8223bd289001?w=400",
         description: "Land of Kings with magnificent palaces and forts",
@@ -1189,7 +1189,7 @@ const indianStates = [
         rating: 4.8,
       },
       {
-        name: "Udaipur - City of Lakes",
+        name: "Udaipur",
         image:
           "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400",
         description: "Venice of the East with palaces",
@@ -1197,7 +1197,7 @@ const indianStates = [
         rating: 4.9,
       },
       {
-        name: "Jaisalmer - Golden City",
+        name: "Jaisalmer",
         image:
           "https://images.unsplash.com/photo-1578454114025-c4372d8ffd93?w=400",
         description: "Desert city with golden fort",
@@ -1205,7 +1205,7 @@ const indianStates = [
         rating: 4.8,
       },
       {
-        name: "Jodhpur - Blue City",
+        name: "Jodhpur",
         image:
           "https://images.unsplash.com/photo-1609920658906-8223bd289001?w=400",
         description: "Mehrangarh Fort and blue houses",
@@ -1411,7 +1411,7 @@ const indianStates = [
     name: "Uttar Pradesh",
     places: [
       {
-        name: "Agra - Taj Mahal",
+        name: "Taj Mahal",
         image:
           "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400",
         description: "Home to the symbol of love - Taj Mahal",
