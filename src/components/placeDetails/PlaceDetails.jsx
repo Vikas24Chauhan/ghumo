@@ -92,7 +92,10 @@ const PlaceDetails = () => {
   return (
     <div className="place-details-container">
       {/* Hero Section */}
-      <div className="place-details-hero-section">
+      <div
+        className="place-details-hero-section"
+        style={{ "--hero-bg": `url(${placeData.heroImage})` }}
+      >
         <div className="place-details-hero-overlay" />
         <div className="place-details-hero-content">
           <h1 className="place-details-hero-title">{placeData.name}</h1>
